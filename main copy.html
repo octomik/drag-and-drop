@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html> 
+    <head> 
+        <link rel="stylesheet" href="style_copy.css">
+
+        <!--javascript per Drag&Drop-->
+        <script>
+            function allowDrop(ev) {
+                ev.preventDefault();
+            }
+
+            function drag(ev) {
+                ev.dataTransfer.setData("text", ev.target.id);
+            }
+
+            function drop(ev) {
+                ev.preventDefault();
+                var data = ev.dataTransfer.getData("text");
+                ev.target.appendChild(document.getElementById(data));
+            }
+
+            
+        </script>
+
+    </head>
+
+    <body> 
+        <section>
+            <div class="table">
+                <table>
+                    <tr>
+                        <th></th>
+                        <th class="title"><h2>Lunedì</h2></th>
+                        <th class="title"><h2>Martedì</h2></th>
+                        <th class="title"><h2>Mercoledì</h2></th>
+                        <th class="title"><h2>Giovedì</h2></th>
+                        <th class="title"><h2>Venerdì</h2></th>
+                        <th class="title"><h2>Sabato</h2></th>
+                        <th class="title"><h2>Domenica</h2></th>
+                    </tr>
+                    <tr>
+                        <th><h2>Tecnico 1</h2></th>
+                        <td class="task" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                        <td class="task" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                        <td class="task" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                        <td class="task" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                        <td class="task" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                        <td class="task" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                        <td class="task" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                    </tr>
+                    <tr>
+                        <th><h2>Tecnico 2</h2></th>
+                        <td class="task" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                        <td class="task" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                        <td class="task" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                        <td class="task" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                        <td class="task" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                        <td class="task" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                        <td class="task" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                    </tr>
+                    <tr>
+                        <th><h2>Tecnico 3</h2></th>
+                        <td class="task" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                        <td class="task" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                        <td class="task" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                        <td class="task" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                        <td class="task" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                        <td class="task" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                        <td class="task" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                    </tr>
+                    <tr>
+                        <th><h2>Tecnico 4</h2></th>
+                        <td class="task" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                        <td class="task" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                        <td class="task" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                        <td class="task" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                        <td class="task" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                        <td class="task" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                        <td class="task" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="task-table">
+                <h2>
+                    <p class="title"> <b>TASK</b> </p>
+                </h2>
+                <div class="drop" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <p class="task" draggable="true" ondragstart="drag(event)" id="drag1" >TASK1</p>  
+                </div>
+                <div class="drop" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <p class="task" draggable="true" ondragstart="drag(event)" id="drag2" >TASK2</p>  
+                </div>
+                <div class="drop" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <p class="task" draggable="true" ondragstart="drag(event)" id="drag3" >TASK3</p>  
+                </div>
+                <div class="drop" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <p class="task" draggable="true" ondragstart="drag(event)" id="drag4" >TASK4</p>  
+                </div>
+            </div>
+        </section>>
+
+    </body>
+
+</html>

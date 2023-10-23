@@ -1,0 +1,84 @@
+body{
+    background-color: #edf0f1;
+}
+
+table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+  
+
+th, td{
+    border: 1px solid black;
+    padding: 3px;
+    text-align: center;
+    background-color: #def2f4;
+}
+
+
+th.title{
+    color: white;
+    background-color: #398B93;
+
+}
+
+
+td.task{
+    color: green;
+    text-decoration-thickness: 2px;
+    user-select: none;
+    height: 80px;
+
+}
+
+
+div.table{
+    float: left;
+    width: 80%;
+    padding: 4px;
+}
+
+
+div.task-table {
+    float: right;
+    width: 15%;
+    padding: 2%;
+}
+
+
+div.drop{
+    border: 1px solid black;
+    height: 80px;
+    padding: 8px;
+    background-color: #def2f4;
+}
+
+
+p.title{
+    outline-style: double;
+    text-align: center;
+    padding: 15px;
+    background-color: #398B93;
+    color: wheat;
+}
+
+
+p.task {
+    border: 1px solid black;
+    padding: 8px;
+    height: 30px;
+    text-align: center;
+    user-select: none;
+    background-color: wheat;
+}
+
+
+
+/* Clear floats after the columns */
+section::after {
+    content: "";
+    display: table;
+    clear: both;
+}
